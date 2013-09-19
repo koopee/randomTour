@@ -34,11 +34,10 @@
 			var osmAttrib='Map data © OpenStreetMap contributors';
 			var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 20, attribution: osmAttrib});
 			
-			
 			// Set coordinates and zoom for the map view
 			map.setView(new L.LatLng(60.457218, 22.256584),12);
 			
-			// Add layers we just created
+			// Add OSM-baselayer
 			map.addLayer(osm);
 			
 			var datalayer_style = {
@@ -47,18 +46,25 @@
 			    "opacity": 0.65
 			};
 			
+			// GeoJSON is stored inside a file, fetch data using Ajax-request.
 			$.ajax({
 			    type: "POST",
 			    url: "http://opendata.lounaispaikka.fi/datasets/turun_kaupunki/epsg4326_konversiot/aluejaot/geojson/Kaupunginosat_09_2010_epsg4326.geojson",
 			    dataType: 'json',
-			    crossDomain: true,
 			    success: function (response) {
 				geojsonLayer = L.geoJson(response, {
-				    style: datalayer_style
+				    style: datalayer_style,
+				    onEachFeature: displayName // Bind popup to feature
 				}).addTo(map);
 			    }
 			});
-
+			
+			// Adds name of the area as popup
+			function displayName(feature, layer){
+			    if (feature.properties.Teksti) {
+				layer.bindPopup(feature.properties.Teksti);
+			    }
+			}
 		}
 		
 		// Run initmap-function when site is loaded
