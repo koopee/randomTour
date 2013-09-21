@@ -1,0 +1,26 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "id": 0, "properties": { "ID": 1, "Laji": 86942, "Lajin_seli": "te:ulkoveistokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "96", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Päivänkakkara" }, "geometry": { "type": "Point", "coordinates": [ 22.237051802955254, 60.43658807432147 ] } }
+,
+{ "type": "Feature", "id": 1, "properties": { "ID": 4, "Laji": 86942, "Lajin_seli": "te:ulkoveistokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "95", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Sweet Yellow Melon" }, "geometry": { "type": "Point", "coordinates": [ 22.271538075020246, 60.450422688483954 ] } }
+,
+{ "type": "Feature", "id": 2, "properties": { "ID": 6, "Laji": 86942, "Lajin_seli": "te:ulkoveistokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "93", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Ikaros" }, "geometry": { "type": "Point", "coordinates": [ 22.268368903198404, 60.448919069827696 ] } }
+,
+{ "type": "Feature", "id": 3, "properties": { "ID": 8, "Laji": 86942, "Lajin_seli": "te:ulkoveistokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "94", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Tapaaminen Turussa 1812" }, "geometry": { "type": "Point", "coordinates": [ 22.272334942448381, 60.450157185717373 ] } }
+,
+{ "type": "Feature", "id": 4, "properties": { "ID": 11, "Laji": 86942, "Lajin_seli": "te:ulkoveistokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "85", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Erik Julin" }, "geometry": { "type": "Point", "coordinates": [ 22.261085545143157, 60.448556439399155 ] } }
+,
+{ "type": "Feature", "id": 5, "properties": { "ID": 13, "Laji": 86942, "Lajin_seli": "te:ulkoveistokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "83", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Dominikaanikonventin muistomerkki" }, "geometry": { "type": "Point", "coordinates": [ 22.269780721950145, 60.447577178280333 ] } }
+,
+{ "type": "Feature", "id": 6, "properties": { "ID": 17, "Laji": 86942, "Lajin_seli": "te:ulkoveistokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "97", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "La fresco" }, "geometry": { "type": "Point", "coordinates": [ 22.28690938533731, 60.43617146616716 ] } }
+,
+{ "type": "Feature", "id": 7, "properties": { "ID": 19, "Laji": 86942, "Lajin_seli": "te:ulkoveistokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "86", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Ulkoa ja sisältä" }, "geometry": { "type": "Point", "coordinates": [ 22.264828658025905, 60.453908422543165 ] } }
+,
+{ "type": "Feature", "id": 8, "properties": { "ID": 21, "Laji": 86942, "Lajin_seli": "te:ulkoveistokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "80", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Kertosäe" }, "geometry": { "type": "Point", "coordinates": [ 22.272593314183478, 60.451056494406139 ] } }
+,
+{ "type": "Feature", "id": 9, "properties": { "ID": 23, "Laji": 86942, "Lajin_seli": "te:ulkoveistokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "71", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Ylös pyhään pyörryttävään korkeuteen" }, "geometry": { "type": "Point", "coordinates": [ 22.276288037124406, 60.452637464840876 ] } }
+
+]
+}

@@ -1,0 +1,80 @@
+[{"location":{"lat":60.44947,"lon":22.26832,"id":15756,"name":"Groups","marker":"/mobile/images/map/pin-Museot.png"}}
+
+,{"location":{"lat":60.44947,"lon":22.26832,"id":15757,"name":"Groups","marker":"/mobile/images/map/pin-Perheille.png"}},
+
+{"location":{"lat":60.448246,"lon":22.2686,"id":100217,"name":"Konstrundan – the Art Circuit","marker":"/mobile/images/map/pin-Kiertoajelut.png"}},
+
+{"location":{"lat":60.455887,"lon":22.268408,"id":44663,"name":"Musicians of the King´s Road","marker":"/mobile/images/map/pin-Teatteri.png"}},
+
+{"location":{"lat":60.576176,"lon":22.895508,"id":50512,"name":"Kylämäki Horse Farm","marker":"/mobile/images/map/pin-Urheilu.png"}},
+
+{"location":{"lat":60.439396,"lon":22.246412,"id":19689,"name":"Manila","marker":"/mobile/images/map/pin-Urheilu.png"}},
+
+{"location":{"lat":60.441216,"lon":22.274996,"id":19794,"name":"Turku Healthcare Museum","marker":"/mobile/images/map/pin-Museot.png"}},
+
+{"location":{"lat":60.450275,"lon":22.27169,"id":19634,"name":"Vähätori Square","marker":"/mobile/images/map/pin-Shop.png"}},
+
+{"location":{"lat":60.454952,"lon":22.268642,"id":19639,"name":"Puutori Square","marker":"/mobile/images/map/pin-Urheilu.png"}},
+
+{"location":{"lat":60.454678,"lon":22.269287,"id":19684,"name":"Where did the Great Fire of Turku begin?","marker":"/mobile/images/map/pin-Museot.png"}},
+
+{"location":{"lat":60.44873,"lon":22.247957,"id":14328,"name":"Michael's Church","marker":"/mobile/images/map/pin-Museot.png"}},
+
+{"location":{"lat":60.455315,"lon":22.270918,"id":13315,"name":"Turku Philharmonic Orchestra","marker":"/mobile/images/map/pin-TurkuCard.png"}},
+
+{"location":{"lat":60.44816,"lon":22.276669,"id":12430,"name":"Turku Open Air Theatre","marker":"/mobile/images/map/pin-TurkuCard.png"}},
+
+{"location":{"lat":60.450275,"lon":22.275639,"id":14493,"name":"Old Great Square","marker":"/mobile/images/map/pin-Perheille.png"}},
+
+{"location":{"lat":60.443016,"lon":22.243153,"id":14317,"name":"Kakolanmäki Hill","marker":"/mobile/images/map/pin-Museot.png"}},
+
+{"location":{"lat":60.446552,"lon":22.258549,"id":12429,"name":"Linnateatteri","marker":"/mobile/images/map/pin-Perheille.png"}},
+
+{"location":{"lat":60.472366,"lon":22.005444,"id":13325,"name":"Theatre Emma","marker":"/mobile/images/map/pin-Teatteri.png"}},
+
+{"location":{"lat":60.450783,"lon":22.279415,"id":10635,"name":"Historic Ox Road","marker":"/mobile/images/map/pin-Perheille.png"}},
+
+{"location":{"lat":60.461205,"lon":22.333862,"id":10904,"name":"Kylämäki Village of Living History","marker":"/mobile/images/map/pin-Perheille.png"}},
+
+{"location":{"lat":60.444992,"lon":22.26472,"id":10903,"name":"Biological Museum","marker":"/mobile/images/map/pin-TurkuCard.png"}},
+
+{"location":{"lat":60.45099,"lon":22.272015,"id":10285,"name":"Turku Main Library","marker":"/mobile/images/map/pin-Perheille.png"}},
+
+{"location":{"lat":60.467754,"lon":22.2995,"id":14336,"name":"Ancient ruins of Koroinen","marker":"/mobile/images/map/pin-Museot.png"}},
+
+{"location":{"lat":60.448414,"lon":22.267782,"id":10278,"name":"Pharmacy Museum and Qwensel House","marker":"/mobile/images/map/pin-TurkuCard.png"}},
+
+{"location":{"lat":60.459503,"lon":22.288729,"id":14491,"name":"Posankka, statue","marker":"/mobile/images/map/pin-Perheille.png"}},
+
+{"location":{"lat":60.83452,"lon":22.98886,"id":10613,"name":"Sarka – The Finnish Museum of Agriculture","marker":"/mobile/images/map/pin-Perheille.png"}},
+
+{"location":{"lat":60.450962,"lon":22.2662,"id":12428,"name":"Åbo Svenska Teater","marker":"/mobile/images/map/pin-Teatteri.png"}},
+
+{"location":{"lat":60.446674,"lon":22.264439,"id":12427,"name":"Turku City Theatre","marker":"/mobile/images/map/pin-TurkuCard.png"}},
+
+{"location":{"lat":60.436832,"lon":22.234612,"id":10286,"name":"Forum Marinum Maritime Centre","marker":"/mobile/images/map/pin-TurkuCard.png"}},
+
+{"location":{"lat":60.445152,"lon":22.25955,"id":10284,"name":"Wäinö Aaltonen Museum","marker":"/mobile/images/map/pin-TurkuCard.png"}},
+
+{"location":{"lat":60.454044,"lon":22.261864,"id":10283,"name":"Turku Art Museum","marker":"/mobile/images/map/pin-TurkuCard.png"}},
+
+{"location":{"lat":60.44503,"lon":22.261457,"id":12431,"name":"Samppalinna Summer Theatre","marker":"/mobile/images/map/pin-TurkuCard.png"}},
+
+{"location":{"lat":60.453716,"lon":22.278542,"id":10280,"name":"Museum \"Ett hem\"","marker":"/mobile/images/map/pin-Museot.png"}},
+
+{"location":{"lat":60.450104,"lon":22.265274,"id":14321,"name":"Turku Market Hall","marker":"/mobile/images/map/pin-Shop.png"}},
+
+{"location":{"lat":60.43385,"lon":22.1741,"id":10300,"name":"Botanical Garden","marker":"/mobile/images/map/pin-Saaristo.png"}},
+
+{"location":{"lat":60.447163,"lon":22.275438,"id":10279,"name":"Luostarinmäki Handicrafts Museum","marker":"/mobile/images/map/pin-TurkuCard.png"}},
+
+{"location":{"lat":60.40679,"lon":22.25115,"id":13525,"name":"Art Chapel","marker":"/mobile/images/map/pin-TurkuCard.png"}},,
+
+{"location":{"lat":60.435753,"lon":22.228598,"id":10277,"name":"Turku Castle","marker":"/mobile/images/map/pin-TurkuCard.png"}},
+
+{"location":{"lat":60.452477,"lon":22.279158,"id":10276,"name":"Turku Cathedral","marker":"/mobile/images/map/pin-TurkuCard.png"}},
+
+
+
+{"location":{"lat":60.450104,"lon":22.27352,"id":10275,"name":"Aboa Vetus & Ars Nova","marker":"/mobile/images/map/pin-TurkuCard.png"}}
+ 

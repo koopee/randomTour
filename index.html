@@ -3,10 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<title>Hackathon - GeoJSON DEMO</title>
+	<title>Hackathon - Random turku tour</title>
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
 	<script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
 	<script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/leaflet.awesome-markers.css">
+        <script src="js/leaflet.awesome-markers.js"></script>
 	<!--[if lte IE 8]>
 		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
 	<![endif]-->
@@ -25,9 +29,61 @@
 	<div id="map"></div>
 	
 	<script>
+            	// <link rel="stylesheet" href="leaflet.awesome-markers.css">
+                // <script src="leaflet.awesome-markers.js">
+                var datalayer_style = {
+                    "color": "#ff7800",
+                    "weight": 5,
+                    "opacity": 0.65
+                };
+                var hereMarker = L.AwesomeMarkers.icon({
+                    color: 'red'
+                });
+                var bounds = new L.LatLngBounds();
+                var fileCount = 0;
+                var maxDist = 1000;
+		var map = new L.Map('map');
+                var myLocation = null;
+                var locationList = [];
+                var randomLocations = 4;
+                var testLng = 21;
+                var testLat = 60;
+                var visibleLocations = [];
+                var geojsonLayer = L.geoJson(null, {
+                                        style: datalayer_style,
+                                        onEachFeature: pushToList, // Bind popup to feature
+                                        filter: nearMe
+                                        //pointToLayer: function(feature, coords){console.log(coords);}
+                                    });
+                
+                var turkudata = "data/turku touring museot yms.txt";
+                var dataLists = ["data/Suihkukaivotaideteokset_epsg4326.geojson",
+                 "data/Ulkoveistokset_epsg4326.geojson",
+                 "data/Ymparistotaideteokset_epsg4326.geojson",
+                 "data/museot_yms.geojson"
+                 ];
+                     
+                function updateRndLocation(e) {
+                    
+                }
+                function locationDblClick(e) {
+                    console.log(e);
+                    var index = $.inArray(e.target, visibleLocations);
+                    console.log(index);
+                    var newLocation = newRndLocation();
+                    var oldMarker = visibleLocations.splice(index,1)[0];
+                    locationList.push(oldMarker);
+                    map.removeLayer(oldMarker);
+                    map.fitBounds(bounds);
+                }
+                function locationClick(e) {
+                }
+                
+                function updateLocationList() {
+                }
+                
 		function initmap() {
 			// Set up the map
-			var map = new L.Map('map');
 
 			// Create baselayer using Open Street Map
 			var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
@@ -35,37 +91,117 @@
 			var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 20, attribution: osmAttrib});
 			
 			// Set coordinates and zoom for the map view
-			map.setView(new L.LatLng(60.457218, 22.256584),12);
-			
-			// Add OSM-baselayer
+                        map.locate({setView: true, maxZoom: 15, watch: true});
+
+			map.on('locationfound', onLocationFound);
+                        map.on('locationerror', onLocationError);
 			map.addLayer(osm);
 			
-			var datalayer_style = {
-			    "color": "#ff7800",
-			    "weight": 5,
-			    "opacity": 0.65
-			};
 			
+
+                        //$.map(dataLists, readDataList);
 			// GeoJSON is stored inside a file, fetch data using Ajax-request.
-			$.ajax({
-			    type: "POST",
-			    url: "http://opendata.lounaispaikka.fi/datasets/turun_kaupunki/epsg4326_konversiot/aluejaot/geojson/Kaupunginosat_09_2010_epsg4326.geojson",
-			    dataType: 'json',
-			    success: function (response) {
-				geojsonLayer = L.geoJson(response, {
-				    style: datalayer_style,
-				    onEachFeature: displayName // Bind popup to feature
-				}).addTo(map);
-			    }
-			});
-			
+		}	
+                        function readDataList(e, i){
+                            $.ajax({
+                                type: "GET",
+                                url: e,
+                                dataType: 'json',
+                                success: function (response, dataLen, i) {
+                                    geojsonLayer.addData(response);
+                                    //geojsonLayer.addTo(map);
+                                    console.log("pisteitä lisää")
+                                    if (dataLists.length == ++fileCount){
+                                        initRandomData();                                    }
+                                }
+                            });
+                        }
+                        
+                        function newRndLocation() {
+                            if (locationList.length > 0) {
+                                var index = Math.floor(Math.random() * locationList.length);
+                                var marker = locationList.splice(index,1)[0];
+                                map.addLayer(marker);
+                                //marker.openPopup();
+                                bounds.extend(marker.getLatLng());
+                                visibleLocations.push(marker);
+                                return marker;
+                            } else {
+                            }
+                        }
+                        
+                        function initRandomData(){
+                            if (locationList.length < randomLocations) {
+                             alert("Not enough points of interest within " + maxDist + " meters." );
+                            } else {
+                                for (i=0; i< randomLocations; i++){
+                                    newRndLocation();
+                                }
+                                map.fitBounds(bounds);
+                            }
+                        }
+                        function nearMe(feature, layer){
+                            var dist = myLocation.getLatLng().distanceTo([feature.geometry.coordinates[1],
+                                feature.geometry.coordinates[0]]);
+                            return (dist < maxDist);
+                        }
+                        function visiblePoint(feature, layer){
+                            //visibleLocations.include?(feature.id)
+                            console.log( result = $.inArray(feature, visibleLocations));
+                            return true; //return (result== -1 ? false : true )
+                        }
+                        function pushToList(feature, layer){
+                            var new_marker = new L.Marker([feature.geometry.coordinates[1],
+                                feature.geometry.coordinates[0]]);
+                            new_marker.bindPopup(feature.properties.ttj_teokse); // Set name as popup 
+                            new_marker.on('click', locationClick);
+                            new_marker.on('dblclick', locationDblClick);
+                            locationList.push(new_marker);
+                            //displayName(feature, layer);
+//                            layer.on("click", getNewPoint);
+//                            layer.on("mouseover", showText);
+                        }
+                        
+                        function showText(feature, layer){
+                            feature.target.openPopup();
+                        }
 			// Adds name of the area as popup
 			function displayName(feature, layer){
 			    if (feature.properties.Teksti) {
 				layer.bindPopup(feature.properties.Teksti);
 			    }
 			}
-		}
+                        function getNewPoint(feature, layer){
+                            console.log(feature);
+                        }
+		function onLocationFound(e) {
+                    console.log(e.latlng);
+                //Calculate radius
+                var radius = e.accuracy / 2;
+                //Where you are!
+                if (myLocation) {
+                    myLocation.setLatLng(e.latlng).update();                  
+                } else {
+                    (myLocation = L.marker(e.latlng, {icon: hereMarker}).addTo(map)).bindPopup(
+                            "You are within " + radius + " meters from this point").openPopup();
+                    console.log(bounds);
+                    bounds.extend(myLocation.getLatLng());
+                    console.log(bounds)
+                    $.map(dataLists, readDataList);
+                }
+
+                }
+
+                /**
+                * Users location is not defined or blocked
+                */
+                function onLocationError(e) {
+                console.log(e.message);
+                // Set coordinates and zoom for the map view
+                map.setView(new L.LatLng(60.457218, 22.256584),12);
+                drawRestaurantMarkers(false);
+                }
+		
 		
 		// Run initmap-function when site is loaded
 		initmap();

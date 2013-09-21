@@ -1,0 +1,12 @@
+!table
+!version 300
+!charset WindowsLatin1
+
+Definition Table
+  Type NATIVE Charset "WindowsLatin1"
+  Fields 5
+    ID Decimal (10, 0) ;
+    Laji Decimal (10, 0) ;
+    Lajin_seli Char (30) ;
+    Z1 Float ;
+    Z2 Float ;

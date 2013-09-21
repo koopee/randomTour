@@ -1,0 +1,75 @@
+{
+"type": "FeatureCollection",
+
+"features": [
+{ "type": "Feature", "id": 0, "properties": { "ttj_teokse": "Aboa Vetus & Ars Nova" }, "geometry": { "type": "Point", "coordinates": [ 22.27352, 60.450104 ] } }
+,
+{ "type": "Feature", "id": 1, "properties": { "ttj_teokse": "Turun linna" }, "geometry": { "type": "Point", "coordinates": [ 22.228598, 60.435753 ] } }
+,
+{ "type": "Feature", "id": 2, "properties": { "ttj_teokse": "Art chapel" }, "geometry": { "type": "Point", "coordinates": [ 22.25115, 60.40679 ] } }
+,
+{ "type": "Feature", "id": 3, "properties": { "ttj_teokse": "Luostarinmäki Handicrafts Museum" }, "geometry": { "type": "Point", "coordinates": [ 22.275438, 60.447163 ] } }
+,
+{ "type": "Feature", "id": 4, "properties": { "ttj_teokse": "Botanical Garden" }, "geometry": { "type": "Point", "coordinates": [ 22.1741, 60.43385 ] } }
+,
+{ "type": "Feature", "id": 5, "properties": { "ttj_teokse": "Turku market hall" }, "geometry": { "type": "Point", "coordinates": [ 22.265274, 60.450104 ] } }
+,
+{ "type": "Feature", "id": 6, "properties": { "ttj_teokse": "Ett hem -museum" }, "geometry": { "type": "Point", "coordinates": [ 22.278542, 60.453716 ] } }
+,
+{ "type": "Feature", "id": 7, "properties": { "ttj_teokse": "Samppalinna summer theater" }, "geometry": { "type": "Point", "coordinates": [ 22.261457, 60.44503 ] } }
+,
+{ "type": "Feature", "id": 8, "properties": { "ttj_teokse": "Turku art museum" }, "geometry": { "type": "Point", "coordinates": [ 22.261864, 60.454044 ] } }
+,
+{ "type": "Feature", "id": 9, "properties": { "ttj_teokse": "Wäinö Aaltonen museum" }, "geometry": { "type": "Point", "coordinates": [ 22.25955, 60.445152 ] } }
+,
+{ "type": "Feature", "id": 10, "properties": { "ttj_teokse": "Forum Marinum maritime centre" }, "geometry": { "type": "Point", "coordinates": [ 22.234612, 60.436832 ] } }
+,
+{ "type": "Feature", "id": 11, "properties": { "ttj_teokse": "Turku city theater" }, "geometry": { "type": "Point", "coordinates": [ 22.264439, 60.446674 ] } }
+,
+{ "type": "Feature", "id": 12, "properties": { "ttj_teokse": "Åbo Svenska teater" }, "geometry": { "type": "Point", "coordinates": [ 22.2662, 60.450962 ] } }
+,
+{ "type": "Feature", "id": 13, "properties": { "ttj_teokse": "The Finnish Museum of Agriculture" }, "geometry": { "type": "Point", "coordinates": [ 22.98886, 60.83452 ] } }
+,
+{ "type": "Feature", "id": 14, "properties": { "ttj_teokse": "Posankka" }, "geometry": { "type": "Point", "coordinates": [ 22.288729, 60.459503 ] } }
+,
+{ "type": "Feature", "id": 15, "properties": { "ttj_teokse": "Pharmacy Museum and Qwensel House" }, "geometry": { "type": "Point", "coordinates": [ 22.267782, 60.448414 ] } }
+,
+{ "type": "Feature", "id": 16, "properties": { "ttj_teokse": "Ancient ruins of Koroinen" }, "geometry": { "type": "Point", "coordinates": [ 22.2995, 60.467754 ] } }
+,
+{ "type": "Feature", "id": 17, "properties": { "ttj_teokse": "Turku main library" }, "geometry": { "type": "Point", "coordinates": [ 22.272015, 60.45099 ] } }
+,
+{ "type": "Feature", "id": 18, "properties": { "ttj_teokse": "Biological museum" }, "geometry": { "type": "Point", "coordinates": [ 22.26472, 60.444992 ] } }
+,
+{ "type": "Feature", "id": 19, "properties": { "ttj_teokse": "Kylämäki Village of Living History" }, "geometry": { "type": "Point", "coordinates": [ 22.333862, 60.461205 ] } }
+,
+{ "type": "Feature", "id": 20, "properties": { "ttj_teokse": "Historic ox road" }, "geometry": { "type": "Point", "coordinates": [ 22.279415, 60.450783 ] } }
+,
+{ "type": "Feature", "id": 21, "properties": { "ttj_teokse": "Emma theater" }, "geometry": { "type": "Point", "coordinates": [ 22.005444, 60.472366 ] } }
+,
+{ "type": "Feature", "id": 22, "properties": { "ttj_teokse": "Linnateatteri" }, "geometry": { "type": "Point", "coordinates": [ 22.258549, 60.446552 ] } }
+,
+{ "type": "Feature", "id": 23, "properties": { "ttj_teokse": "Kakolanmäki hill" }, "geometry": { "type": "Point", "coordinates": [ 22.243153, 60.443016 ] } }
+,
+{ "type": "Feature", "id": 24, "properties": { "ttj_teokse": "Old great square" }, "geometry": { "type": "Point", "coordinates": [ 22.275639, 60.450275 ] } }
+,
+{ "type": "Feature", "id": 25, "properties": { "ttj_teokse": "Turku philharmonic orchestra" }, "geometry": { "type": "Point", "coordinates": [ 22.270918, 60.455315 ] } }
+,
+{ "type": "Feature", "id": 26, "properties": { "ttj_teokse": "Michael's church" }, "geometry": { "type": "Point", "coordinates": [ 22.247957, 60.44873 ] } }
+,
+{ "type": "Feature", "id": 27, "properties": { "ttj_teokse": "Great fire of Turku origin location" }, "geometry": { "type": "Point", "coordinates": [ 22.269287, 60.454678 ] } }
+,
+{ "type": "Feature", "id": 28, "properties": { "ttj_teokse": "Vähätori square" }, "geometry": { "type": "Point", "coordinates": [ 22.27169, 60.450275 ] } }
+,
+{ "type": "Feature", "id": 29, "properties": { "ttj_teokse": "Turku healthcare museum" }, "geometry": { "type": "Point", "coordinates": [ 22.274996, 60.441216 ] } }
+,
+{ "type": "Feature", "id": 30, "properties": { "ttj_teokse": "Manila" }, "geometry": { "type": "Point", "coordinates": [ 22.246412, 60.439396 ] } }
+,
+{ "type": "Feature", "id": 31, "properties": { "ttj_teokse": "Kylämäki horse farm" }, "geometry": { "type": "Point", "coordinates": [ 22.895508, 60.576176 ] } }
+,
+{ "type": "Feature", "id": 32, "properties": { "ttj_teokse": "Musicians of the King's road" }, "geometry": { "type": "Point", "coordinates": [ 22.268408, 60.455887 ] } }
+,
+{ "type": "Feature", "id": 33, "properties": { "ttj_teokse": "Konstrundan - the art circuit" }, "geometry": { "type": "Point", "coordinates": [ 22.2686, 60.448246 ] } }
+
+
+]
+}

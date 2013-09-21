@@ -1,0 +1,16 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "id": 0, "properties": { "ID": 1, "Laji": 86941, "Lajin_seli": "te:suihkukaivoteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "57", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Ajan virta" }, "geometry": { "type": "Point", "coordinates": [ 22.275270292742011, 60.450954279743257 ] } }
+,
+{ "type": "Feature", "id": 1, "properties": { "ID": 4, "Laji": 86941, "Lajin_seli": "te:suihkukaivoteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "56", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Gustav Albert Petreliuksen suihkukaivo" }, "geometry": { "type": "Point", "coordinates": [ 22.272815760170769, 60.451129525402763 ] } }
+,
+{ "type": "Feature", "id": 2, "properties": { "ID": 6, "Laji": 86941, "Lajin_seli": "te:suihkukaivoteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "55", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Lapset" }, "geometry": { "type": "Point", "coordinates": [ 22.260670348735882, 60.450372201233641 ] } }
+,
+{ "type": "Feature", "id": 3, "properties": { "ID": 8, "Laji": 86941, "Lajin_seli": "te:suihkukaivoteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "54", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Susanna" }, "geometry": { "type": "Point", "coordinates": [ 22.260397486589849, 60.445074673443429 ] } }
+,
+{ "type": "Feature", "id": 4, "properties": { "ID": 10, "Laji": 86941, "Lajin_seli": "te:suihkukaivoteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "53", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Harmonia" }, "geometry": { "type": "Point", "coordinates": [ 22.243378759410593, 60.439252497614305 ] } }
+
+]
+}
