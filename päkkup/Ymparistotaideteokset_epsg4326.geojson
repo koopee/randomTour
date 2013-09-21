@@ -1,0 +1,62 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "id": 0, "properties": { "ID": 1, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "87", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Kimono" }, "geometry": { "type": "Point", "coordinates": [ 22.253017178964136, 60.444230509876327 ] } }
+,
+{ "type": "Feature", "id": 1, "properties": { "ID": 2, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "87", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Kimono" }, "geometry": { "type": "Point", "coordinates": [ 22.252962639078504, 60.444230204245784 ] } }
+,
+{ "type": "Feature", "id": 2, "properties": { "ID": 3, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "69", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Helmet" }, "geometry": { "type": "Point", "coordinates": [ 22.243537721112073, 60.437995778551951 ] } }
+,
+{ "type": "Feature", "id": 3, "properties": { "ID": 4, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "69", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Helmet" }, "geometry": { "type": "Point", "coordinates": [ 22.243483191791366, 60.437995469062024 ] } }
+,
+{ "type": "Feature", "id": 4, "properties": { "ID": 5, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "68", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Jäähuntu" }, "geometry": { "type": "Point", "coordinates": [ 22.280035925403059, 60.459018086143288 ] } }
+,
+{ "type": "Feature", "id": 5, "properties": { "ID": 6, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "68", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Jäähuntu" }, "geometry": { "type": "Point", "coordinates": [ 22.279981360391954, 60.459017791524097 ] } }
+,
+{ "type": "Feature", "id": 6, "properties": { "ID": 7, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "67", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": null }, "geometry": { "type": "Point", "coordinates": [ 22.289637127872226, 60.458568922915092 ] } }
+,
+{ "type": "Feature", "id": 7, "properties": { "ID": 8, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "67", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": null }, "geometry": { "type": "Point", "coordinates": [ 22.289582713402613, 60.458568633024399 ] } }
+,
+{ "type": "Feature", "id": 8, "properties": { "ID": 9, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "77", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Tiedon häivä" }, "geometry": { "type": "Point", "coordinates": [ 22.280023560811621, 60.452248958003786 ] } }
+,
+{ "type": "Feature", "id": 9, "properties": { "ID": 10, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "77", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Tiedon häivä" }, "geometry": { "type": "Point", "coordinates": [ 22.279969157027178, 60.452248664208362 ] } }
+,
+{ "type": "Feature", "id": 10, "properties": { "ID": 11, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "65", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "The Transparent Dream" }, "geometry": { "type": "Point", "coordinates": [ 22.274230739728544, 60.449823423729214 ] } }
+,
+{ "type": "Feature", "id": 11, "properties": { "ID": 12, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "65", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "The Transparent Dream" }, "geometry": { "type": "Point", "coordinates": [ 22.274176190208081, 60.449823126761267 ] } }
+,
+{ "type": "Feature", "id": 12, "properties": { "ID": 13, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "66", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Turun punavankileirin muistomerkki (Punavankileirin muistomerkki)" }, "geometry": { "type": "Point", "coordinates": [ 22.288107032996798, 60.450980619426673 ] } }
+,
+{ "type": "Feature", "id": 13, "properties": { "ID": 14, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "66", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Turun punavankileirin muistomerkki (Punavankileirin muistomerkki)" }, "geometry": { "type": "Point", "coordinates": [ 22.288052631237317, 60.45098032893312 ] } }
+,
+{ "type": "Feature", "id": 14, "properties": { "ID": 15, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "63", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Turun Linnatontun ja Valpuri Innamaan kohtaaminen@teatterisillalla (Teatterisilta & Teatterisillan V" }, "geometry": { "type": "Point", "coordinates": [ 22.264718274805453, 60.446728836365494 ] } }
+,
+{ "type": "Feature", "id": 15, "properties": { "ID": 16, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "63", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Turun Linnatontun ja Valpuri Innamaan kohtaaminen@teatterisillalla (Teatterisilta & Teatterisillan V" }, "geometry": { "type": "Point", "coordinates": [ 22.264663730588239, 60.446728535514715 ] } }
+,
+{ "type": "Feature", "id": 16, "properties": { "ID": 17, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "64", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Network" }, "geometry": { "type": "Point", "coordinates": [ 22.265710667464244, 60.446470555963202 ] } }
+,
+{ "type": "Feature", "id": 17, "properties": { "ID": 18, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "64", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Network" }, "geometry": { "type": "Point", "coordinates": [ 22.265656273513443, 60.446470256344647 ] } }
+,
+{ "type": "Feature", "id": 18, "properties": { "ID": 19, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "62", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Carro Celeste" }, "geometry": { "type": "Point", "coordinates": [ 22.261677152710828, 60.445449832675564 ] } }
+,
+{ "type": "Feature", "id": 19, "properties": { "ID": 20, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "62", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Carro Celeste" }, "geometry": { "type": "Point", "coordinates": [ 22.26162261067465, 60.445449530584341 ] } }
+,
+{ "type": "Feature", "id": 20, "properties": { "ID": 21, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "61", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Gaian silmä" }, "geometry": { "type": "Point", "coordinates": [ 22.259236618981543, 60.444175802923674 ] } }
+,
+{ "type": "Feature", "id": 21, "properties": { "ID": 22, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "61", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Gaian silmä" }, "geometry": { "type": "Point", "coordinates": [ 22.259182079110627, 60.444175499837755 ] } }
+,
+{ "type": "Feature", "id": 22, "properties": { "ID": 23, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "60", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Pohjoinen (Laiva)" }, "geometry": { "type": "Point", "coordinates": [ 22.241794781499028, 60.438819860813965 ] } }
+,
+{ "type": "Feature", "id": 23, "properties": { "ID": 24, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "60", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Pohjoinen (Laiva)" }, "geometry": { "type": "Point", "coordinates": [ 22.241740400629315, 60.43881955146076 ] } }
+,
+{ "type": "Feature", "id": 24, "properties": { "ID": 25, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "59", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Fibonacci Sequence 1-55" }, "geometry": { "type": "Point", "coordinates": [ 22.23817798558019, 60.438912171546463 ] } }
+,
+{ "type": "Feature", "id": 25, "properties": { "ID": 26, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "59", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Fibonacci Sequence 1-55" }, "geometry": { "type": "Point", "coordinates": [ 22.238123454791943, 60.43891185986115 ] } }
+,
+{ "type": "Feature", "id": 26, "properties": { "ID": 27, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "58", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Tiedon pyramidi" }, "geometry": { "type": "Point", "coordinates": [ 22.298735978836387, 60.422723449401168 ] } }
+,
+{ "type": "Feature", "id": 27, "properties": { "ID": 28, "Laji": 86940, "Lajin_seli": "te:ympäristötaideteokset", "Z1": 0.0, "Z2": 0.0, "Teksti": "58", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Tiedon pyramidi" }, "geometry": { "type": "Point", "coordinates": [ 22.298681624154518, 60.422723163323234 ] } }
+
+]
+}

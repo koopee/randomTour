@@ -1,0 +1,18 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "id": 0, "properties": { "ID": 1, "Laji": 86943, "Lajin_seli": "te:muu kiinteä taideteos", "Z1": 0.0, "Z2": 0.0, "Teksti": "84", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Iglu" }, "geometry": { "type": "Point", "coordinates": [ 22.269536171309557, 60.455058689034367 ] } }
+,
+{ "type": "Feature", "id": 1, "properties": { "ID": 2, "Laji": 86943, "Lajin_seli": "te:muu kiinteä taideteos", "Z1": 0.0, "Z2": 0.0, "Teksti": "84", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Iglu" }, "geometry": { "type": "Point", "coordinates": [ 22.2694817629521, 60.455058390951663 ] } }
+,
+{ "type": "Feature", "id": 2, "properties": { "ID": 3, "Laji": 86943, "Lajin_seli": "te:muu kiinteä taideteos", "Z1": 0.0, "Z2": 0.0, "Teksti": "89", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Nuorten Turku elää" }, "geometry": { "type": "Point", "coordinates": [ 22.262030295406174, 60.448268117753067 ] } }
+,
+{ "type": "Feature", "id": 3, "properties": { "ID": 4, "Laji": 86943, "Lajin_seli": "te:muu kiinteä taideteos", "Z1": 0.0, "Z2": 0.0, "Teksti": "89", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Nuorten Turku elää" }, "geometry": { "type": "Point", "coordinates": [ 22.261975748641554, 60.448267815798062 ] } }
+,
+{ "type": "Feature", "id": 4, "properties": { "ID": 5, "Laji": 86943, "Lajin_seli": "te:muu kiinteä taideteos", "Z1": 0.0, "Z2": 0.0, "Teksti": "81", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Temppeli" }, "geometry": { "type": "Point", "coordinates": [ 22.284921107205619, 60.445947030522561 ] } }
+,
+{ "type": "Feature", "id": 5, "properties": { "ID": 6, "Laji": 86943, "Lajin_seli": "te:muu kiinteä taideteos", "Z1": 0.0, "Z2": 0.0, "Teksti": "81", "om_1": null, "om_2": null, "om_3": null, "om_4": null, "URL_Webmap": null, "ttj_teokse": "Temppeli" }, "geometry": { "type": "Point", "coordinates": [ 22.284866564055296, 60.445946737939529 ] } }
+
+]
+}
