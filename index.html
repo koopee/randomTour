@@ -50,7 +50,7 @@
                 var bounds = new L.LatLngBounds();
                 var fileCount = 0;
                 var maxDist = 1000;
-		var map = new L.Map('map');
+		var map = new L.Map('map', {doubleClickZoom: false});
                 var myLocation = null;
                 var locationList = [];
                 var randomLocations = 4;
@@ -122,7 +122,7 @@
 
 			// Create baselayer using Open Street Map
 			var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-			var osmAttrib='Map data © OpenStreetMap contributors';
+			var osmAttrib='Map data © OpenStreetMap contributors. Random Tour by Kari-Pekka Pyylampi & Juho Loukonen';
 			var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 20, attribution: osmAttrib});
 			
 			// Set coordinates and zoom for the map view
