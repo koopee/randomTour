@@ -22,12 +22,18 @@
 	  html, body, #map {
 	      height: 100%;
 	  }
+          #newTourOnArea {
+              display: block;
+              position: absolute;
+              bottom: 15px;
+              left: 15px;
+          }
 	</style>
 </head>
 <body>
 	<!-- HTML Div that contains our Leaflet-map --->
 	<div id="map"></div>
-	
+	<button id="newTourOnArea" name="newTour"> New Tour from Area </button>
 	<script>
             	// <link rel="stylesheet" href="leaflet.awesome-markers.css">
                 // <script src="leaflet.awesome-markers.js">
@@ -39,6 +45,8 @@
                 var hereMarker = L.AwesomeMarkers.icon({
                     color: 'red'
                 });
+                var areaFilter = false;
+                var tourBounds = null;
                 var bounds = new L.LatLngBounds();
                 var fileCount = 0;
                 var maxDist = 1000;
@@ -62,7 +70,34 @@
                  "data/Ymparistotaideteokset_epsg4326.geojson",
                  "data/museot_yms.geojson"
                  ];
-                     
+                
+                
+                $("#newTourOnArea").click(function(){
+                    console.log("New Tour");
+//                                           $.map(dataLists, readDataList);
+                    var oldMarker;
+                    while (oldMarker = visibleLocations.pop()) {
+                        map.removeLayer(oldMarker);
+                    }
+ 
+                    console.log(locationList);
+                    locationList=[];
+                    fileCount = 0;
+                    areaFilter = true;
+                    tourBounds = map.getBounds();
+                    bounds = new L.LatLngBounds();
+                    console.log(tourBounds);
+                    //geojsonLayer.filter = filterView;
+                    console.log(geojsonLayer);
+                    getNewLocationList();
+                    console.log(locationList);
+                    
+                });
+                
+//                function filterView(feature, layer){
+//                    console.log("areafilter");
+//                    return true;
+//                }
                 function updateRndLocation(e) {
                     
                 }
@@ -110,9 +145,10 @@
                                 success: function (response, dataLen, i) {
                                     geojsonLayer.addData(response);
                                     //geojsonLayer.addTo(map);
-                                    console.log("pisteitä lisää")
-                                    if (dataLists.length == ++fileCount){
-                                        initRandomData();                                    }
+                                    console.log("pisteitä lisää");
+                                    if (dataLists.length === ++fileCount){
+                                        initRandomData();
+                                    }
                                 }
                             });
                         }
@@ -141,9 +177,14 @@
                             }
                         }
                         function nearMe(feature, layer){
-                            var dist = myLocation.getLatLng().distanceTo([feature.geometry.coordinates[1],
-                                feature.geometry.coordinates[0]]);
-                            return (dist < maxDist);
+                            if (areaFilter) {
+                                return tourBounds.contains([feature.geometry.coordinates[1],
+                                    feature.geometry.coordinates[0]]); 
+                            } else {
+                                var dist = myLocation.getLatLng().distanceTo([feature.geometry.coordinates[1],
+                                    feature.geometry.coordinates[0]]);
+                                return (dist < maxDist);
+                            }
                         }
                         function visiblePoint(feature, layer){
                             //visibleLocations.include?(feature.id)
@@ -176,20 +217,24 @@
                         }
 		function onLocationFound(e) {
                     console.log(e.latlng);
-                //Calculate radius
-                var radius = e.accuracy / 2;
-                //Where you are!
-                if (myLocation) {
-                    myLocation.setLatLng(e.latlng).update();                  
-                } else {
-                    (myLocation = L.marker(e.latlng, {icon: hereMarker}).addTo(map)).bindPopup(
-                            "You are within " + radius + " meters from this point").openPopup();
-                    console.log(bounds);
-                    bounds.extend(myLocation.getLatLng());
-                    console.log(bounds)
-                    $.map(dataLists, readDataList);
-                }
+                    //Calculate radius
+                    var radius = e.accuracy / 2;
+                    //Where you are!
+                    if (myLocation) {
+                        myLocation.setLatLng(e.latlng).update();                  
+                    } else {
+                        (myLocation = L.marker(e.latlng, {icon: hereMarker}).addTo(map)).bindPopup(
+                                "You are within " + radius + " meters from this point").openPopup();
+                        console.log(bounds);
+                        bounds.extend(myLocation.getLatLng());
+                        console.log(bounds)
+                        getNewLocationList();
+                    }
 
+                }
+                
+                function getNewLocationList(){
+                        $.map(dataLists, readDataList);                    
                 }
 
                 /**
@@ -198,8 +243,11 @@
                 function onLocationError(e) {
                 console.log(e.message);
                 // Set coordinates and zoom for the map view
+//                if (myLocation) {
+//                    
+//                }
                 map.setView(new L.LatLng(60.457218, 22.256584),12);
-                drawRestaurantMarkers(false);
+                //drawRestaurantMarkers(false);
                 }
 		
 		
