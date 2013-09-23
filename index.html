@@ -37,13 +37,14 @@
               position: absolute;
               bottom: 15px;
               left: 15px;
+              z-index: 2000;
           }
 	</style>
 </head>
 <body>
 	<!-- HTML Div that contains our Leaflet-map --->
 	<div id="map"></div>
-	<button id="newTourOnArea" name="newTour"> New Tour from Area </button>
+        <button id="newTourOnArea" name="newTour"> New Tour from Area </button>
 	<script>
             	// <link rel="stylesheet" href="leaflet.awesome-markers.css">
                 // <script src="leaflet.awesome-markers.js">
@@ -60,18 +61,18 @@
                 var bounds = new L.LatLngBounds();
                 var fileCount = 0;
                 var maxDist = 1000;
+                var nearestDist = null;
+                var nearestFeature = null;
 		var map = new L.Map('map', {doubleClickZoom: false});
                 var myLocation = null;
-                var locationList = [];
                 var randomLocations = 4;
-                var testLng = 21;
-                var testLat = 60;
+                var locationList = [];
                 var visibleLocations = [];
+                var discardedLocations = [];
                 var geojsonLayer = L.geoJson(null, {
                                         style: datalayer_style,
                                         onEachFeature: pushToList, // Bind popup to feature
                                         filter: nearMe
-                                        //pointToLayer: function(feature, coords){console.log(coords);}
                                     });
                 
                 var turkudata = "data/turku touring museot yms.txt";
@@ -84,7 +85,6 @@
                 
                 $("#newTourOnArea").click(function(){
                     console.log("New Tour");
-//                                           $.map(dataLists, readDataList);
                     var oldMarker;
                     while (oldMarker = visibleLocations.pop()) {
                         map.removeLayer(oldMarker);
@@ -92,34 +92,38 @@
  
                     console.log(locationList);
                     locationList=[];
+                    discardedLocations = [];
                     fileCount = 0;
                     areaFilter = true;
                     tourBounds = map.getBounds();
                     bounds = new L.LatLngBounds();
                     console.log(tourBounds);
-                    //geojsonLayer.filter = filterView;
-                    console.log(geojsonLayer);
                     getNewLocationList();
                     console.log(locationList);
                     
                 });
                 
-//                function filterView(feature, layer){
-//                    console.log("areafilter");
-//                    return true;
-//                }
                 function updateRndLocation(e) {
                     
                 }
                 function locationDblClick(e) {
-                    console.log(e);
                     var index = $.inArray(e.target, visibleLocations);
-                    console.log(index);
                     var newLocation = newRndLocation();
-                    var oldMarker = visibleLocations.splice(index,1)[0];
-                    locationList.push(oldMarker);
-                    map.removeLayer(oldMarker);
-                    map.fitBounds(bounds);
+                    if (newLocation) {
+                        var oldMarker = visibleLocations.splice(index,1)[0];
+                        discardedLocations.push(oldMarker);
+                        map.removeLayer(oldMarker);
+                        map.fitBounds(bounds);
+                    } else {
+                        // Put the discardedlocationlist into locationlist
+                        alert ("Sorry - run out of points of interests. Starting to select the old ones again.");
+                        locationList = discardedLocations;
+                        discardedLocations = [];
+                        if (locationList.length) {
+                            // Get one new venue from the locationpile
+                            locationDblClick(e);
+                        }
+                    }
                 }
                 function locationClick(e) {
                 }
@@ -132,7 +136,7 @@
 
 			// Create baselayer using Open Street Map
 			var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-			var osmAttrib='Map data © OpenStreetMap contributors. Random Tour by Kari-Pekka Pyylampi & Juho Loukonen';
+			var osmAttrib='Map data © OpenStreetMap contributors </br> Random Tour by Kari-Pekka Pyylampi & Juho Loukonen';
 			var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 20, attribution: osmAttrib});
 			
 			// Set coordinates and zoom for the map view
@@ -154,8 +158,6 @@
                                 dataType: 'json',
                                 success: function (response, dataLen, i) {
                                     geojsonLayer.addData(response);
-                                    //geojsonLayer.addTo(map);
-                                    console.log("pisteitä lisää");
                                     if (dataLists.length === ++fileCount){
                                         initRandomData();
                                     }
@@ -173,17 +175,27 @@
                                 visibleLocations.push(marker);
                                 return marker;
                             } else {
+                                return false;
                             }
                         }
                         
                         function initRandomData(){
-                            if (locationList.length < randomLocations) {
-                             alert("Not enough points of interest within " + maxDist + " meters." );
-                            } else {
-                                for (i=0; i< randomLocations; i++){
-                                    newRndLocation();
-                                }
+                            console.log("Points of interest "+ locationList.length);
+                            for (i=0; i< randomLocations; i++){
+                                if (!newRndLocation()) break;
+                            }
+                            if (visibleLocations.length > 0) {
                                 map.fitBounds(bounds);
+                            } else {
+                                if (areaFilter) {
+                                    alert("No points of interest within area");
+                                } else {
+                                    if (nearestFeature) {
+                                        pushToList(nearestFeature, null);
+                                        alert("No points within " + maxDist +"meters. Showing the nearest one.");
+                                        initRandomData();
+                                    }
+                                }
                             }
                         }
                         function nearMe(feature, layer){
@@ -193,14 +205,15 @@
                             } else {
                                 var dist = myLocation.getLatLng().distanceTo([feature.geometry.coordinates[1],
                                     feature.geometry.coordinates[0]]);
+                                // Get nearest feature.
+                                if ((!nearestDist) || (dist < nearestDist)) {
+                                    nearestDist = dist;
+                                    nearestFeature = feature;
+                                }
                                 return (dist < maxDist);
                             }
                         }
-                        function visiblePoint(feature, layer){
-                            //visibleLocations.include?(feature.id)
-                            console.log( result = $.inArray(feature, visibleLocations));
-                            return true; //return (result== -1 ? false : true )
-                        }
+
                         function pushToList(feature, layer){
                             var new_marker = new L.Marker([feature.geometry.coordinates[1],
                                 feature.geometry.coordinates[0]]);
@@ -208,9 +221,6 @@
                             new_marker.on('click', locationClick);
                             new_marker.on('dblclick', locationDblClick);
                             locationList.push(new_marker);
-                            //displayName(feature, layer);
-//                            layer.on("click", getNewPoint);
-//                            layer.on("mouseover", showText);
                         }
                         
                         function showText(feature, layer){
