@@ -107,7 +107,8 @@
                     
                 }
                 function locationDblClick(e) {
-                    var index = $.inArray(e.target, visibleLocations);
+                    e = this;
+                    var index = $.inArray(e, visibleLocations);
                     var newLocation = newRndLocation();
                     if (newLocation) {
                         var oldMarker = visibleLocations.splice(index,1)[0];
@@ -217,7 +218,13 @@
                         function pushToList(feature, layer){
                             var new_marker = new L.Marker([feature.geometry.coordinates[1],
                                 feature.geometry.coordinates[0]]);
-                            new_marker.bindPopup(feature.properties.ttj_teokse); // Set name as popup 
+                            var popup = document.createElement('div');
+                            popup.innerHTML = feature.properties.ttj_teokse + "<br/>";
+                            var button = document.createElement('button');
+                            popup.appendChild(button);
+                            button.textContent = 'New place';
+                            L.DomEvent.addListener(button, 'click', locationDblClick, new_marker);
+                            new_marker.bindPopup(popup);
                             new_marker.on('click', locationClick);
                             new_marker.on('dblclick', locationDblClick);
                             locationList.push(new_marker);
