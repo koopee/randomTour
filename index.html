@@ -106,6 +106,13 @@
                 function updateRndLocation(e) {
                     
                 }
+                
+                function updateBounds() {
+                    bounds = new L.LatLngBounds();
+                    $.map(visibleLocations, function(marker){
+                        bounds.extend(marker.getLatLng());
+                    });
+                }
                 function locationDblClick(e) {
                     e = this;
                     var index = $.inArray(e, visibleLocations);
@@ -114,6 +121,8 @@
                         var oldMarker = visibleLocations.splice(index,1)[0];
                         discardedLocations.push(oldMarker);
                         map.removeLayer(oldMarker);
+                        updateBounds();
+                        newLocation.openPopup();
                         map.fitBounds(bounds);
                     } else {
                         // Put the discardedlocationlist into locationlist
