@@ -63,6 +63,7 @@
                 var maxDist = 1000;
                 var nearestDist = null;
                 var nearestFeature = null;
+                var defaultMap = true;
 		var map = new L.Map('map', {doubleClickZoom: false});
                 var myLocation = null;
                 var randomLocations = 4;
@@ -254,6 +255,7 @@
 		function onLocationFound(e) {
                     console.log(e.latlng);
                     //Calculate radius
+                    defaultMap = false;
                     var radius = e.accuracy / 2;
                     //Where you are!
                     if (myLocation) {
@@ -277,13 +279,13 @@
                 * Users location is not defined or blocked
                 */
                 function onLocationError(e) {
-                console.log(e.message);
-                // Set coordinates and zoom for the map view
-//                if (myLocation) {
-//                    
-//                }
-//                map.setView(new L.LatLng(60.457218, 22.256584),12);
-                //drawRestaurantMarkers(false);
+                    console.log(e.message);
+                    // Set coordinates and zoom for the map view
+                    if (defaultMap) {
+                       defaultMap = false;
+                       map.setView(new L.LatLng(60.457218, 22.256584),12);               
+                    }
+                    //drawRestaurantMarkers(false);
                 }
 		
 		
